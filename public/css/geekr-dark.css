@@ -1,0 +1,76 @@
+:root {
+  --geekr: #FF6D00;
+  --gray: #808080;
+  --white: #FFFFFF;
+  --darkwhite: rgba(255, 255, 255, 0.7);
+  --red: #FF0000;
+  --green: #38c172;
+  --bg: #222222;
+  --card: #191919;
+}
+
+#app {
+  background-color: var(--bg);
+}
+
+.navbar, .navbar a {
+  background-color: var(--card) !important;
+  color: var(--darkwhite) !important;
+}
+
+footer, footer a {
+  background-color: var(--card) !important;
+  color: var(--darkwhite) !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  color: var(--darkwhite);
+}
+
+hr {
+  background-color: var(--darkwhite);
+}
+
+input {
+  background-color: var(--card) !important;
+  color: var(--darkwhite) !important;
+}
+
+a {
+  color: var(--darkwhite) !important;
+}
+
+.navbar-toggler i {
+  color: var(--darkwhite);
+}
+
+.theme-toggler button {
+  border: none !important;
+}
+
+.theme-toggler {
+  border: none !important;
+  background-color: var(--card);
+  color: var(--darkwhite) !important;
+}
+
+.row {
+  color: var(--darkwhite) !important;
+}
+
+.card, .card h5 {
+  background-color: var(--card);
+  color: var(--darkwhite);
+}
+
+.btn-geekr {
+  background-color: var(--bg);
+}
+
+.btn-geekr:hover {
+  background-color: var(--card);
+}
+
+.dropdown-menu {
+  background-color: var(--bg);
+}
