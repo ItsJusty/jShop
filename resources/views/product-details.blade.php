@@ -48,7 +48,7 @@
       {{ Form::open(array('action' => 'CartController@addToCart')) }}
       <input type="number" name="amount" id="amount" min="1" value="1" />
       <input type="hidden" name="id" id="id" value="{{$product->id}}"><br/>
-      <button class="btn btn-geekr btn-sm mt-4" type="submit" name="submit">
+      <button class="btn btn-nw btn-sm mt-4" type="submit" name="submit">
         <i class="fas fa-plus"></i> {{__('product.add_to_cart')}}
       </button>
       {{ Form::close() }}
@@ -80,7 +80,7 @@
             <h6 class="d-inline p-1 w-100 bd-highlight">{{__('general.currency')}}{{number_format($product->price, 2)}}</h6>
             {{ Form::open(array('action' => 'CartController@addToCart')) }}
             <input type="hidden" name="id" id="id" value="{{ $product->id }}">
-            <button href="{{action('CartController@addToCart', $product->id)}}" class="btn btn-geekr flex-shrink-1 bd-highlight">
+            <button href="{{action('CartController@addToCart', $product->id)}}" class="btn btn-nw flex-shrink-1 bd-highlight">
               <i class="fas fa-cart-plus"></i>
             </button>
             {{ Form::close() }}

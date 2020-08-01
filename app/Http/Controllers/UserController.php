@@ -42,37 +42,5 @@ class UserController extends Controller
 
       flash(__('flashes.user_details_changed'))->success();
       return redirect()->back();
-     }
-
-     public function changeWebTheme(Request $request)
-     {
-
-       $joe = 'ja';
-       $nee = 'nee';
-
-       $theme = $request->session()->get('dark_theme');
-
-       // return dd($test);
-
-       // if ($request->session()->has('web_theme')) {
-       //   if ($request->session()->get('web_theme', 'dark')) {
-       //     $request->session()->put('web_theme', 'white');
-       //   }
-       //
-       //   if ($request->session()->get('white')) {
-       //     $request->session()->put('web_theme', 'dark');
-       //   }
-       //   $request->session()->put('web_theme', 'dark');
-       // }
-
-       if ($theme) {
-         $request->session()->put('dark_theme', false);
-       } else {
-         $request->session()->put('dark_theme', true);
-       }
-
-
-
-       return redirect()->back();
-     }
+    }
 }

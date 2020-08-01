@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Geekr | @yield('page')</title>
+    <title>Nachtwinkeltje | @yield('page')</title>
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -22,16 +22,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/geekr.css') }}?time={{time()}}" rel="stylesheet">
-    @if(session('dark_theme'))
-      <link href="{{ asset('css/geekr-dark.css') }}?time={{time()}}" rel="stylesheet">
-    @endif
+    <link href="{{ asset('css/nw.css') }}?time={{time()}}" rel="stylesheet">
+    <link href="{{ asset('css/nw_dark.css') }}?time={{time()}}" rel="stylesheet">
 </head>
 <body>
   <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm border-bottom">
       <div class="container">
-        <span>Klantenservice: {{ config('app.email') }}</span>
+        <span><b>Gratis</b> bezorging vanaf 25,-</span>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
               <span class="navbar-toggler-icon"></span>
           </button> -->
@@ -94,19 +92,6 @@
                 </div>
               </li>
             @endguest
-            <li class="nav-item d-none d-md-block">
-              @if (session('dark_theme'))
-                <form class="mt-2" action="{{ route('toggle-web-theme') }}" method="post">
-                  @csrf
-                  <button class="theme-toggler" href="{{ route('toggle-web-theme') }}" type="submit"><i class="fa fa-sun"></i></button>
-                </form>
-                @else
-                <form class="mt-2" action="{{ route('toggle-web-theme') }}" method="post">
-                  @csrf
-                  <button class="theme-toggler" href="{{ route('toggle-web-theme') }}" type="submit"><i class="fa fa-moon"></i></button>
-                </form>
-              @endif
-            </li>
           </ul>
         </div>
       </div>
@@ -136,26 +121,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Categorieën</a>
+              <a class="nav-link" href="{{route('categories')}}">Categorieën</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{route('customer-support')}}">Klantenservice</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Zakelijk</a>
-            </li>
-            <li class="nav-item d-md-none">
-              @if (session('dark_theme'))
-                <form action="{{ route('toggle-web-theme') }}" method="post">
-                  @csrf
-                  <button class="nav-link theme-toggler" href="{{ route('toggle-web-theme') }}" type="submit">White theme <i class="theme-toggler-icon fa fa-sun"></i></button>
-                </form>
-                @else
-                <form action="{{ route('toggle-web-theme') }}" method="post">
-                  @csrf
-                 <button class="nav-link theme-toggler" href="{{ route('toggle-web-theme') }}" type="submit">Dark theme <i class="theme-toggler-icon fa fa-moon"></i></button>
-                </form>
-              @endif
             </li>
           </ul>
         </div>
@@ -173,31 +142,28 @@
             <a class="footer-item" href="#">Algemene voorwaarden</a><br/>
             <a class="footer-item" href="#">Privacybeleid</a><br/>
             <a class="footer-item" href="#">Koekjes</a><br/>
-            <a class="footer-item" href="#">Werken bij Geekr</a><br/>
-            <a class="footer-item" href="#">Nieuws</a>
+            <!-- <a class="footer-item" href="#">Werken bij Geekr</a><br/> -->
+            <!-- <a class="footer-item" href="#">Nieuws</a> -->
             <hr class="d-block d-sm-none d-md-none d-lg-none d-xl-none" />
           </div>
           <div class="col-lg-3 col-6">
             <h5>Klantenservice</h5><br/>
             <a class="footer-item" href="#">Support Tickets</a><br/>
-            <a class="footer-item" href="#">Garantie</a><br/>
-            <a class="footer-item" href="#">Retourbeleid</a><br/>
             <a class="footer-item" href="#">Contact</a><br/>
             <a class="footer-item" href="#">Klacht melden</a><br/>
             <hr class="d-block d-sm-none d-md-none d-lg-none d-xl-none" />
           </div>
           <div class="col-lg-3 col-6">
-            <h5>Zakelijk</h5><br/>
-            <a class="footer-item" href="#">Zakelijke klanten</a><br/>
-            <a class="footer-item" href="#">Waardebonnen</a>
+            <h5>Handige gegevens</h5><br/>
+            <a class="footer-item" href="https://www.kvk.nl/zoeken/?source=all&q=75491753&start=0&site=kvk2014" target="_blank">KVK: 78323460<br/>
+            IBAN: NL93 INGB 0007 1742 12<br/>
+            BTW: NL860301989B01
           </div>
           <div class="col-lg-3 col-6">
             <h5>Winkel informatie</h5><br/>
-            Geekr<br/>
+            Nachtwinkeltje<br/>
             Kingmastate 52<br/>
             8926NB Leeuwarden<br/>
-            <a class="footer-item" href="https://www.kvk.nl/zoeken/?source=all&q=75491753&start=0&site=kvk2014" target="_blank">KVK: 75491753<br/>
-            BTW: NL860301989B01
           </div>
         </div>
       </div>

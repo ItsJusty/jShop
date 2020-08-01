@@ -48,7 +48,7 @@
   <br/>
   <div class="row">
       <div class="col-lg-7 col-md-8 col-12 text-right">
-         <button class="btn btn-geekr" type="submit" name="submit"><i class="far fa-edit"></i> {{__('general.change')}}</button>
+         <button class="btn btn-nw" type="submit" name="submit"><i class="far fa-edit"></i> {{__('general.change')}}</button>
       </div>
   </div>
   {{ Form::close() }}

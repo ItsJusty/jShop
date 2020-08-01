@@ -58,7 +58,7 @@
    <input type="hidden" id="id" name="id" value="{{ $address->id }}">
   <div class="row">
       <div class="col-lg-7 col-md-8 col-12 text-right">
-         <button class="btn btn-geekr" type="submit" name="submit"><i class="far fa-edit"></i> {{__('user.edit_address')}}</button>
+         <button class="btn btn-nw" type="submit" name="submit"><i class="far fa-edit"></i> {{__('user.edit_address')}}</button>
       </div>
   </div>
   {{ Form::close() }}

@@ -41,10 +41,10 @@
                 </div>
               @empty
                 <p class="text-center mt-5 col-12">Je hebt nog geen adressen toegevoegd aan je account. Waar moeten we nu alle pakketjes naartoe verzenden? :(</p>
-                <a class="btn btn-geekr text-white align-center col-lg-4 offset-lg-4" href="{{ route('new-addresses') }}"><i class="fa fa-plus"></i> Voeg je eerste adres toe</a>
+                <a class="btn btn-nw text-white align-center col-lg-4 offset-lg-4" href="{{ route('new-addresses') }}"><i class="fa fa-plus"></i> Voeg je eerste adres toe</a>
               @endforelse
               <div class="col-md-3 offset-md-9 p-1 mt-4 pb-0">
-                <button class="btn btn-geekr w-100" type="submit" name="submit"><i class="fa fa-shopping-cart"></i> {{__('cart.place_your_order')}}</button>
+                <button class="btn btn-nw w-100" type="submit" name="submit"><i class="fa fa-shopping-cart"></i> {{__('cart.place_your_order')}}</button>
               </div>
             <!-- </div> -->
           </div>

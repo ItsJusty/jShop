@@ -13,7 +13,7 @@
           <hr/>
           <div class="accordion" id="accordion">
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h1" data-toggle="collapse" data-target="#q1" aria-expanded="true" aria-controls="q1">
+              <button class="btn btn-nw text-left text-white w-100" id="h1" data-toggle="collapse" data-target="#q1" aria-expanded="true" aria-controls="q1">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
@@ -26,9 +26,9 @@
             </h5>
             <div id="q1" class="collapse show" aria-labelledby="h1" data-parent="#accordion">
               <div class="card-body">
-                Je kan op dit moment op 2 manieren betalen, <br/>
-                <b>Ideal:<b> via de vertrouwde omgeving van je bank<br/>
-                <b>Bankoverschrijving:</b> nadat wij het geld hebben ontvangen zullen wij de bestelling versturen
+                Je kan op dit moment op 2 manieren betalen; <br/><br/>
+                <b>Ideal:</b> via de vertrouwde omgeving van je bank<br/>
+                <b>Contant:</b> neem hiervoor contact met ons op via Whatsapp
               </div>
             </div>
 

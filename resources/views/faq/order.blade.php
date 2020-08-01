@@ -13,7 +13,7 @@
           <hr/>
           <div class="accordion" id="accordion">
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h1" data-toggle="collapse" data-target="#q1" aria-expanded="true" aria-controls="q1">
+              <button class="btn btn-nw text-left text-white w-100" id="h1" data-toggle="collapse" data-target="#q1" aria-expanded="true" aria-controls="q1">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
@@ -26,12 +26,12 @@
             </h5>
             <div id="q1" class="collapse show" aria-labelledby="h1" data-parent="#accordion">
               <div class="card-body">
-                Wij en onze bezorgers doen er alles aan om de beloofde levertijd waar te maken. Als dat onverhoopt niet lukt, brengen we je daarvan op de hoogte. Bij sommige artikelen kan je je Track&Trace in de gaten houden voor de meest actuele informatie.
+                Wij en onze bezorgers doen er alles aan om de beloofde levertijd waar te maken. Als dat onverhoopt niet lukt, brengen we je daarvan op de hoogte. Meestal heb je deze binnen 45 minuten bij je thuis!
               </div>
             </div>
 
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h2" data-toggle="collapse" data-target="#q2" aria-expanded="true" aria-controls="q2">
+              <button class="btn btn-nw text-left text-white w-100" id="h2" data-toggle="collapse" data-target="#q2" aria-expanded="true" aria-controls="q2">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
@@ -49,13 +49,13 @@
             </div>
 
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h3" data-toggle="collapse" data-target="#q3" aria-expanded="true" aria-controls="q3">
+              <button class="btn btn-nw text-left text-white w-100" id="h3" data-toggle="collapse" data-target="#q3" aria-expanded="true" aria-controls="q3">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
                   </div>
                   <div class="col-11 faq-text">
-                    Hoe snel ontvang ik mijn geld weer na een retour of annulering?
+                    Hoe snel ontvang ik mijn geld weer na een annulering?
                   </div>
                 </div>
               </button>
@@ -63,13 +63,14 @@
             <div id="q3" class="collapse show" aria-labelledby="h3" data-parent="#accordion">
               <div class="card-body">
                 Het hangt af van de manier waarop je de bestelling hebt geplaatst.<br/><br/>
-                <b>Ideal</b> binnen 5 werkdagen
-                <b>Creditcard</b> binnen 7 werkdagen
+                <b>Ideal</b> binnen 5 werkdagen<br/>
+                <b>Creditcard</b> binnen 7 werkdagen<br/>
+                <b>Contant</b> direct<br/>
               </div>
             </div>
 
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h4" data-toggle="collapse" data-target="#q4" aria-expanded="true" aria-controls="q4">
+              <button class="btn btn-nw text-left text-white w-100" id="h4" data-toggle="collapse" data-target="#q4" aria-expanded="true" aria-controls="q4">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
@@ -82,24 +83,24 @@
             </h5>
             <div id="q4" class="collapse show" aria-labelledby="h4" data-parent="#accordion">
               <div class="card-body">
-                Jazeker! Alle bestellingen worden <b>gratis</b> verzonden.
+                Boven de 25 euro wordt je bestelling gratis verzonden, onder de 25 euro rekenen wij 2,50 bezorgkosten.
               </div>
             </div>
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h5" data-toggle="collapse" data-target="#q5" aria-expanded="true" aria-controls="q5">
+              <button class="btn btn-nw text-left text-white w-100" id="h5" data-toggle="collapse" data-target="#q5" aria-expanded="true" aria-controls="q5">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
                   </div>
                   <div class="col-11 faq-text">
-                    Kan ik buiten Nederland ook bestellen?
+                    Kan ik buiten Leeuwarden ook bestellen?
                   </div>
                 </div>
               </button>
             </h5>
             <div id="q5" class="collapse show" aria-labelledby="h5" data-parent="#accordion">
-              <div class="card-body faq-text">
-                Nope, helaas! Op dit moment bezorgen wij alleen in Nederland. Je kan wel via onze <a href="https://www.bol.com/nl/v/overdeverkoper/1474326/index.html?offerId=#seller_overview">bol.com pagina</a> in belgie bestellen
+              <div class="card-body">
+                Het is op dit moment alleen mogelijk om binnen een straal van <b>20 kilometer</b> vanaf Leeuwarden te bestellen. Houdt er wel rekening mee dat hoe verder je besteld, hoe langer de bezoring eventueel kan duren.
               </div>
             </div>
           </div>

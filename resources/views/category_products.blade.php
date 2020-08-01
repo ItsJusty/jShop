@@ -9,11 +9,8 @@
 </div>
 <div class="container mt-5">
   @include('flash::message')
-  @if( session('web_theme') == 'dark' )
-  Je hebt darkmodus aan
-  @endif
   <div class="mb-4">
-    <!-- <h3>Producten</h3> -->
+    <h3>Onze <b>{{ $category->name }}</b></h3>
   </div>
   <div class="row">
     @forelse($products as $product)
@@ -73,7 +70,7 @@
 
     @empty
       <div class="col-12">
-        <p class="text-center">Geen producten gevonden</p>
+        <p class="text-center">Geen producten gevonden in de categorie: {{ $category->name }}</p>
       </div>
     @endforelse
   </div>

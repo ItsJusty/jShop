@@ -18,34 +18,26 @@
           <div class="support-items">
             <div class="row">
               <div class="col-lg-6 col-12">
-                <a href="{{ route('customer-support-order') }}" class="btn btn-geekr border-radius-none w-100 text-left"><i class="fa fa-truck col-1 mr-2"></i>Bestellen en bezorgen</a>
+                <a href="{{ route('customer-support-order') }}" class="btn btn-nw border-radius-none w-100 text-left"><i class="fa fa-truck col-1 mr-2"></i>Bestellen en bezorgen</a>
               </div>
               <div class="col-lg-6 col-12">
-                <a href="{{ route('customer-support-guarantee') }}" class="btn btn-geekr border-radius-none w-100 text-left"><i class="fa fa-mobile col-1 mr-2"></i>Garantie en reparatie</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 col-12">
-                <a href="{{ route('customer-support-cancel') }}" class="btn btn-geekr border-radius-none w-100 text-left"><i class="fa fa-close col-1 mr-2"></i>Annuleren en retour</a>
-              </div>
-              <div class="col-lg-6 col-12">
-                <a href="{{ route('customer-support-pay') }}" class="btn btn-geekr border-radius-none w-100 text-left"><i class="fa fa-euro col-1 mr-2"></i>Betalen</a>
+                <a href="{{ route('customer-support-pay') }}" class="btn btn-nw border-radius-none w-100 text-left"><i class="fa fa-euro col-1 mr-2"></i>Betalen</a>
               </div>
             </div>
             <div class="row">
               <div class="col-lg-6 col-12">
-                <a href="{{ route('customer-support-account') }}" class="btn btn-geekr border-radius-none w-100 text-left"><i class="fa fa-user col-1 mr-2"></i>Mijn account</a>
+                <a href="{{ route('customer-support-account') }}" class="btn btn-nw border-radius-none w-100 text-left"><i class="fa fa-user col-1 mr-2"></i>Mijn account</a>
               </div>
               <div class="col-lg-6 col-12">
-                <a href="{{ route('customer-support-cadeau') }}" class="btn btn-geekr border-radius-none w-100 text-left"><i class="fa fa-gift col-1 mr-2"></i>Cadeaubonnen</a>
+                <a href="{{ route('customer-support-cadeau') }}" class="btn btn-nw border-radius-none w-100 text-left"><i class="fa fa-gift col-1 mr-2"></i>Cadeaubonnen</a>
               </div>
             </div>
             <div class="row">
               <div class="col-lg-6 col-12">
-                <a href="{{ route('customer-support-privacy') }}" class="btn btn-geekr border-radius-none w-100 text-left"><i class="fa fa-user-secret col-1 mr-2"></i>Voorwaarden en privacy</a>
+                <a href="{{ route('customer-support-privacy') }}" class="btn btn-nw border-radius-none w-100 text-left"><i class="fa fa-user-secret col-1 mr-2"></i>Voorwaarden en privacy</a>
               </div>
               <div class="col-lg-6 col-12">
-                <a href="{{ route('customer-support-other') }}" class="btn btn-geekr border-radius-none w-100 text-left"><i class="fa fa-comments col-1 mr-2"></i>Iets anders</a>
+                <a href="{{ route('customer-support-other') }}" class="btn btn-nw border-radius-none w-100 text-left"><i class="fa fa-comments col-1 mr-2"></i>Iets anders</a>
               </div>
             </div>
           </div>

@@ -70,8 +70,6 @@ Route::get('admin', function () {
 
 Route::get('/', 'IndexController@index')->name('index');
 
-Route::post('/webtheme/toggle', 'UserController@changeWebTheme')->name('toggle-web-theme');
-
 Auth::routes();
 
 Route::get('/account', 'AccountController@index')->name('home')->middleware('verified');
@@ -114,6 +112,10 @@ Route::prefix('klantenservice')->group(function() {
   Route::post('/contact-formulier', 'Support\ContactController@submitForm');
 
 });
+
+Route::get('/categories', 'CategoryController@loadAll')->name('categories');
+
+Route::get('/categorie/{id}', 'CategoryController@load')->name('category');
 
 Route::get('/test', 'InvoiceController@show');
 

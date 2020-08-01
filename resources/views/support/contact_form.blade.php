@@ -60,7 +60,7 @@
             </div>
             <div class="form-group row">
               <div class="col-lg-8 col-12">
-                <button style="width: 100%;" class="btn btn-geekr" type="submit" name="submit"><i class="fa fa-plane"></i> Verstuur</button>
+                <button style="width: 100%;" class="btn btn-nw" type="submit" name="submit"><i class="fa fa-plane"></i> Verstuur</button>
               </div>
             </div>
           {{ Form::close() }}

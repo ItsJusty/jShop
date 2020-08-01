@@ -51,7 +51,7 @@
       </div>
     @empty
       <p class="text-center mt-5 col-12">{{__('user.add_first_address_sub')}}</p>
-      <a class="btn btn-geekr text-white align-center col-lg-4 offset-lg-4" href="{{ route('new-addresses') }}"><i class="fa fa-plus"></i> {{__('general.add_first_address')}}</a>
+      <a class="btn btn-nw text-white align-center col-lg-4 offset-lg-4" href="{{ route('new-addresses') }}"><i class="fa fa-plus"></i> {{__('general.add_first_address')}}</a>
     @endforelse
   </div>
 </div>

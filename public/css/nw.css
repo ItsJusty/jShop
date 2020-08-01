@@ -1,5 +1,5 @@
 :root {
-  --geekr: #FF6D00;
+  --nw: #FFCD05;
   --gray: #808080;
   --white: #FFFFFF;
   --red: #FF0000;
@@ -36,7 +36,7 @@ input[type='radio']:checked:after {
     top: -2px;
     left: -1px;
     position: relative;
-    background-color: var(--geekr);
+    background-color: var(--nw);
     content: '';
     display: inline-block;
     visibility: visible;
@@ -81,7 +81,7 @@ p {
 }
 
 .dropdown-item:active {
-  background-color: var(--geekr);
+  background-color: var(--nw);
 }
 
 .dropdown-menu {
@@ -130,24 +130,24 @@ p {
 }
 
 .geekr-color {
-  color: var(--geekr);
+  color: var(--nw);
 }
 
 .geekr-bg {
-  background-color: var(--geekr) !important;
+  background-color: var(--nw) !important;
 }
 
-.btn-geekr {
+.btn-nw {
   background-color: #FF6D00;
   color: #FFF;
-  border-color: #FF6D00;
+  border-color: var(--nw);
   border-radius: 3px;
 }
 
-.btn-geekr:hover {
+.btn-nw:hover {
   background-color: #cc5800;
   color: #FFF;
-  border-color: #cc5800;
+  border-color: #856c04;
 }
 
 .order-completed {
@@ -185,7 +185,7 @@ p {
   bottom: -2px;
   width: 0px;
   height: 2px;
-  background: var(--geekr);
+  background: var(--nw);
   transition: all 0.5s;
   /* transition: all 1s; */
 }
@@ -214,7 +214,7 @@ a:hover {
 }
 
 .label-orange {
-  background-color: var(--geekr);
+  background-color: var(--nw);
 }
 
 .label-red {

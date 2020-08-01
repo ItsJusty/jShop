@@ -14,7 +14,7 @@
           <div class="accordion" id="accordion">
             Op dit moment hebben we hier nog geen vragen
             <!-- <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h1" data-toggle="collapse" data-target="#q1" aria-expanded="true" aria-controls="q1">
+              <button class="btn btn-nw text-left text-white w-100" id="h1" data-toggle="collapse" data-target="#q1" aria-expanded="true" aria-controls="q1">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
@@ -32,7 +32,7 @@
             </div>
 
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h2" data-toggle="collapse" data-target="#q2" aria-expanded="true" aria-controls="q2">
+              <button class="btn btn-nw text-left text-white w-100" id="h2" data-toggle="collapse" data-target="#q2" aria-expanded="true" aria-controls="q2">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
@@ -50,7 +50,7 @@
             </div>
 
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h3" data-toggle="collapse" data-target="#q3" aria-expanded="true" aria-controls="q3">
+              <button class="btn btn-nw text-left text-white w-100" id="h3" data-toggle="collapse" data-target="#q3" aria-expanded="true" aria-controls="q3">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
@@ -71,16 +71,16 @@
           </div>
           <hr/>
           <div class="row justify-content-center text-center p-3">
-            <a href="https://api.whatsapp.com/send?phone=31617674540" class="btn btn-geekr col-lg-3 col-12 pb-2 mb-3">
+            <a href="https://api.whatsapp.com/send?phone=31617674540" class="btn btn-nw col-lg-3 col-12 pb-2 mb-3">
               <!-- <a class="underline-hover" href="#"><i class="fa fa-large fa-whatsapp"></i> Whatsapp</a> -->
               <i class="fa fa-large fa-whatsapp"></i> Whatsapp
             </a>
             <hr>
-            <a href="mailto:hallo@geekr.nl?subject=Geekr.nl - Digitale post vanuit de website" class="btn btn-geekr col-lg-3 col-12 pb-2 mb-3">
+            <a href="mailto:hallo@geekr.nl?subject=Geekr.nl - Digitale post vanuit de website" class="btn btn-nw col-lg-3 col-12 pb-2 mb-3">
               <i class="fa fa-large fa-paper-plane"></i> hallo@geekr.nl
             </a>
             <hr>
-            <a href="{{ route('customer-support-form') }}" class="btn btn-geekr col-lg-3 col-12 pb-2 mb-3">
+            <a href="{{ route('customer-support-form') }}" class="btn btn-nw col-lg-3 col-12 pb-2 mb-3">
               <i class="fa fa-large fa-envelope"></i> Contactformulier
             </a>
           </div>

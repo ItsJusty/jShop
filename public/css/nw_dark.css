@@ -1,5 +1,5 @@
 :root {
-  --geekr: #FF6D00;
+  --nw: #FFCD05;
   --gray: #808080;
   --white: #FFFFFF;
   --darkwhite: rgba(255, 255, 255, 0.7);
@@ -31,8 +31,13 @@ hr {
   background-color: var(--darkwhite);
 }
 
-input {
+input, select {
   background-color: var(--card) !important;
+  color: var(--darkwhite) !important;
+}
+
+textarea {
+  background-color: var(--bg) !important;
   color: var(--darkwhite) !important;
 }
 
@@ -63,11 +68,11 @@ a {
   color: var(--darkwhite);
 }
 
-.btn-geekr {
+.btn-nw {
   background-color: var(--bg);
 }
 
-.btn-geekr:hover {
+.btn-nw:hover {
   background-color: var(--card);
 }
 

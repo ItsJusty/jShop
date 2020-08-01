@@ -13,7 +13,7 @@
           <hr/>
           <div class="accordion" id="accordion">
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h1" data-toggle="collapse" data-target="#q1" aria-expanded="true" aria-controls="q1">
+              <button class="btn btn-nw text-left text-white w-100" id="h1" data-toggle="collapse" data-target="#q1" aria-expanded="true" aria-controls="q1">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
@@ -31,7 +31,7 @@
             </div>
 
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h2" data-toggle="collapse" data-target="#q2" aria-expanded="true" aria-controls="q2">
+              <button class="btn btn-nw text-left text-white w-100" id="h2" data-toggle="collapse" data-target="#q2" aria-expanded="true" aria-controls="q2">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>
@@ -44,12 +44,12 @@
             </h5>
             <div id="q2" class="collapse show" aria-labelledby="h2" data-parent="#accordion">
               <div class="card-body">
-                Wij delen je gegevens met een aantal noodzakelijke partijen. Dit zijn Mollie voor het afhandelen van je betaling, en PostNL / DPD voor het verzenden van je bestelling.
+                Wij delen geen gegevens met derden. Aangezien wij ook onze eigen verzending regelen, is ook een verzendpartij hiervoor niet nodig.
               </div>
             </div>
 
             <h5 class="mb-2">
-              <button class="btn btn-geekr text-left text-white w-100" id="h3" data-toggle="collapse" data-target="#q3" aria-expanded="true" aria-controls="q3">
+              <button class="btn btn-nw text-left text-white w-100" id="h3" data-toggle="collapse" data-target="#q3" aria-expanded="true" aria-controls="q3">
                 <div class="row">
                   <div class="col-1 d-none d-sm-block">
                     <i class="fa fa-caret-down"></i>

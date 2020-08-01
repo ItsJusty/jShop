@@ -18,6 +18,8 @@ class CartController extends Controller
   public function addToCart(Request $request)
   {
 
+    if(!session('shopping_cart')) session(['shopping_cart' => []]);
+
     $id = intval($request->input('id'));
     if(!$id) {
       flash('Er is iets fout gegaan')->error();
