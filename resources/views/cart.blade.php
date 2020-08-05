@@ -81,7 +81,7 @@
         </div>
         <div class="col-lg-2 col-sm-2">
           <p class="text-right">
-            {{ __('general.currency') }}{{ number_format( $totalLow - ($total / 1.21) , 2) }}
+            {{ __('general.currency') }}{{ number_format( $totalLow - ($totalLow / 1.09) , 2) }}
           </p>
         </div>
         @endif
