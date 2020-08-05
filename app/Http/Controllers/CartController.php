@@ -46,8 +46,14 @@ class CartController extends Controller
       return redirect()->back();
     }
 
-    for($i = 0; $i < sizeof(session('shopping_cart')); $i++) {
-      if(session('shopping_cart')[$i]['id'] == $id) {
+    if(!is_array(session('shopping_cart'))) {
+      session(['shopping_cart' => []]);
+    }
+
+    $shoppingCart = session('shopping_cart');
+
+    for($i = key($shoppingCart); $i < sizeof($shoppingCart); $i++) {
+      if(session("shopping_cart")[$i]['id'] == $id) {
         if((session('shopping_cart')[$i]['amount'] + $amount) > $product->stock) {
           flash('Het is niet mogelijk om dit aantal te bestellen omdat we niet genoeg voorraad hebben')->error();
           return redirect()->back();
@@ -67,6 +73,7 @@ class CartController extends Controller
         $itemExists = true;
       }
     }
+
     if(!$itemExists) {
       array_push($newSession, ['id' => $id, 'amount' => $amount]);
     }
@@ -84,6 +91,7 @@ class CartController extends Controller
         unset($products[$key]);
       }
     }
+
     session()->put('shopping_cart', $products);
     flash(__('flashes.remove_cart_success'))->info();
     return redirect()->action('CartController@loadCart');
