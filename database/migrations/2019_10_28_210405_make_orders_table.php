@@ -27,6 +27,9 @@ class MakeOrdersTable extends Migration
           $table->string('postal_code');
           $table->string('city');
           $table->string('total_price');
+          $table->string('tax_low');
+          $table->string('tax_high');
+          $table->string('shipping_costs')->nullable();
           $table->boolean('is_paid')->default('0');
           $table->string('payment_id')->nullable();
           $table->longText('note')->nullable();
