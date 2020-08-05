@@ -8,11 +8,8 @@
   </div>
 </div>
 <div class="container mt-5">
-  @include('flash::message')
   <div class="mb-4">
-    <div class="alert alert-danger" role="alert">
-      <b>Let op!</b> Op dit moment zijn we nog in testfase, alle acties worden niet opgeslagen.
-    </div>
+    <h3>Zoekresultaten voor: <b>{{ $query }}</b></h3>
   </div>
   <div class="row">
     @forelse($products as $product)
@@ -37,34 +34,14 @@
             </a>
             <hr>
             <div class="bd-highlight d-flex">
-              <h6 class="d-inline p-1 w-100 bd-highlight">{{__('general.currency')}}{{number_format($product->price, 2)}}</h6>
-              {{ Form::open(array('action' => 'CartController@addToCart')) }}
+              <h6 class="p-1 w-100 bd-highlight">{{__('general.currency')}}{{number_format($product->price, 2)}}</h6>
+              <button class="btn btn-nw" href="{{ route('product-details', $product->id) }}" name="button">Bekijk</button>
+              <!-- {{ Form::open(array('action' => 'CartController@addToCart')) }}
               <input type="hidden" name="id" id="id" value="{{$product->id}}">
               <button href="{{action('CartController@addToCart')}}" class="btn btn-nw flex-shrink-1 bd-highlight">
                 <i class="fas fa-cart-plus"></i>
               </button>
-              {{ Form::close() }}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal -->
-      <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              {{ Form::close() }} -->
             </div>
           </div>
         </div>
@@ -72,7 +49,27 @@
 
     @empty
       <div class="col-12">
-        <p class="text-center">Geen producten gevonden</p>
+        <p class="text-center">Geen producten gevonden met deze zoekopdracht</p>
+      </div>
+    @endforelse
+  </div>
+</div>
+
+<div class="container mt-5 mb-5">
+  @include('flash::message')
+  <div class="mb-4">
+    <h3>Gevonden categorien</h3>
+  </div>
+  <div class="row">
+    @forelse ($categories as $cat)
+      <div class="col-lg-3 col-md-4 col-sm-6 col-10 offset-1 offset-lg-0 offset-md-0 offset-sm-0 mb-4">
+        <div class="card w-100 h-100 border-0 underline-hover shadow-lg text-center pt-3" style="border-radius: 0rem">
+          <a href="{{ route('category', $cat->id) }}">{{ $cat->name }}</a>
+        </div>
+      </div>
+    @empty
+      <div class="col-12">
+        <p class="text-center">Geen categorien gevonden met deze zoekopdracht</p>
       </div>
     @endforelse
   </div>

@@ -16,6 +16,7 @@ class MakeTaxesTable extends Migration
         Schema::create('taxes', function (Blueprint $table) {
           $table->id();
           $table->string('tax_name');
+          $table->integer('display');
           $table->float('calculate', 8, 2);
         });
     }

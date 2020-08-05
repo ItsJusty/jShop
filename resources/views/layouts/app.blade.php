@@ -49,7 +49,7 @@
 
               <li class="nav-item">
                 <a href="{{ route('winkelmandje') }}" id="cart" class="nav-link d-none d-md-block">
-                  @lang('shopping.shoppingcart') ({{$count}}) <span class="caret"></span>
+                  <i class="fa fa-shopping-cart"></i> @lang('shopping.shoppingcart') ({{$count}}) <span class="caret"></span>
                 </a>
               </li>
             <!-- Authentication Links -->
@@ -102,7 +102,7 @@
           <div class="col-10">
             <a class="navbar-brand mt-1" href="{{ url('/') }}">
               <!-- {{ config('app.name', 'Geekr') }} -->
-              <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-nav">
+              <img src="{{ asset('img/logo-textonly.png') }}" alt="Logo" class="logo-nav">
             </a>
           </div>
           <div class="col-1">
@@ -125,6 +125,18 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{route('customer-support')}}">Klantenservice</a>
+            </li>
+            <li class="nav-item d-flex">
+              {{ Form::open(array('action' => 'IndexController@search')) }}
+              @csrf
+                <div class="d-flex">
+                  <input type="text" id="search" name="search" class="nav-link search" placeholder="Drank zoeken..." href="{{route('customer-support')}}"></input>
+                  <!-- <span style="display: inline">H</span> -->
+                  <button type="submit" id="submit" class="fa-submit pl-2">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              {{ Form::close() }}
             </li>
           </ul>
         </div>
@@ -154,15 +166,15 @@
             <hr class="d-block d-sm-none d-md-none d-lg-none d-xl-none" />
           </div>
           <div class="col-lg-3 col-6">
-            <h5>Handige gegevens</h5><br/>
+            <h5>Handig</h5><br/>
             <a class="footer-item" href="https://www.kvk.nl/zoeken/?source=all&q=75491753&start=0&site=kvk2014" target="_blank">KVK: 78323460<br/>
             IBAN: NL93 INGB 0007 1742 12<br/>
             BTW: NL860301989B01
           </div>
           <div class="col-lg-3 col-6">
-            <h5>Winkel informatie</h5><br/>
+            <h5>Winkel Informatie</h5><br/>
             Nachtwinkeltje<br/>
-            Kingmastate 52<br/>
+            Kingmastate&nbsp;52<br/>
             8926NB Leeuwarden<br/>
           </div>
         </div>

@@ -45,12 +45,41 @@ a {
   color: var(--darkwhite) !important;
 }
 
+/* #search_span::after {
+  content: "\1F50D";
+  font-family: fontawesome;
+  left:-5px;
+  position:absolute;
+  top:0
+} */
+
 .navbar-toggler i {
   color: var(--darkwhite);
 }
 
 .theme-toggler button {
   border: none !important;
+}
+
+.card, .card h5 {
+  background-color: var(--card);
+  color: var(--darkwhite);
+}
+
+/* .fa-submit {
+  background-color: red !important;
+} */
+
+.fa-submit {
+  background: none;
+  padding: 0px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.search {
+  background-color: var(--bg) !important;
 }
 
 .theme-toggler {
@@ -61,11 +90,6 @@ a {
 
 .row {
   color: var(--darkwhite) !important;
-}
-
-.card, .card h5 {
-  background-color: var(--card);
-  color: var(--darkwhite);
 }
 
 .btn-nw {

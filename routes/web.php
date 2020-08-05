@@ -113,6 +113,8 @@ Route::prefix('klantenservice')->group(function() {
 
 });
 
+Route::post('/', 'IndexController@search')->name('search');
+
 Route::get('/categories', 'CategoryController@loadAll')->name('categories');
 
 Route::get('/categorie/{id}', 'CategoryController@load')->name('category');

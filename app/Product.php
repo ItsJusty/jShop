@@ -11,7 +11,7 @@ class Product extends Model
     {
       return $this->hasMany('App\Image');
     }
-    // 
+    //
     // public function category()
     // {
     //   return $this->belongsTo('App\Category');
@@ -20,6 +20,11 @@ class Product extends Model
     public function label()
     {
       return $this->belongsTo('App\Label');
+    }
+
+    public function tax()
+    {
+      return $this->belongsTo('App\Tax');
     }
 
 }

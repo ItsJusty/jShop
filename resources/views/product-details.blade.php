@@ -31,7 +31,7 @@
     <div class="offset-lg-1 col-lg-4 col-sm-12">
       <h3 class="mb-4 pt-4">{{ $product->title }}</h3>
       <p>{{__('general.currency')}}{{number_format($product->price, 2)}}</p>
-      <p>{{ __('product.vat_included') }}</p>
+      <p>Inclusief {{ $product->tax->display }}% BTW</p>
       <p>{{ __('product.intern_referention') }}: @if($product->intern_referention) {{ $product->intern_referention }} @else {{ $product->id }} @endif</p>
       <p>EAN Code: {{ $product->ean13 }}</p>
 
@@ -58,9 +58,9 @@
     </div>
   </div>
   <hr/>
-  <h3 class="mb-4 mt-5">Gerelateerde producten</h3>
+  <h3 class="mb-4 mt-5">Wat mensen ook bestellen</h3>
   <div class="row">
-    @forelse(\App\Product::inRandomOrder()->where([['id', '!=', $product->id], ['stock', '>=', 1], ['is_active', '=', 1]])->take(16)->get() as $product)
+    @forelse(\App\Product::inRandomOrder()->where([['id', '!=', $product->id], ['stock', '>=', 1], ['is_active', '=', 1]])->take(4)->get() as $product)
     <div class="col-lg-3 col-md-4 col-sm-6 col-11 offset-lg-0 offset-md-0 offset-sm-0">
       <div class="card w-100 border-0 underline-hover shadow-lg" style="border-radius: 0rem">
         @if($product->label_id)

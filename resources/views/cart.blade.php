@@ -54,9 +54,17 @@
   @if($cartProducts)
       @php
         $total = 0.00;
+        $totalLow = 0.00;
+        $totalHigh = 0.00;
+
         foreach($cartProducts as $p) {
-          $total += $p['product']->price * $p['amount'];
+          if ($p['product']->tax->display == 9) {
+            $totalLow += $p['product']->price * $p['amount'];
+          } else {
+            $totalHigh += $p['product']->price * $p['amount'];
+          }
         }
+
       @endphp
       <div class="row">
         <div class="col-lg-2 offset-lg-8 col-sm-4 offset-sm-6">
@@ -64,23 +72,36 @@
         </div>
         <div class="col-lg-2 col-sm-2">
           <p class="text-right">
-            {{ __('general.currency') }}{{ number_format(($total / 1.21), 2) }}
+            {{ __('general.currency') }}{{ number_format(($totalLow / 1.09)+($totalHigh / 1.21), 2) }}
           </p>
         </div>
+        @if ($totalLow != 0.00)
         <div class="col-lg-2 offset-lg-8 col-sm-4 offset-sm-6">
-          BTW 21%
+            BTW 9%
         </div>
         <div class="col-lg-2 col-sm-2">
           <p class="text-right">
-            {{ __('general.currency') }}{{ number_format( $total - ($total / 1.21) , 2) }}
+            {{ __('general.currency') }}{{ number_format( $totalLow - ($total / 1.21) , 2) }}
           </p>
         </div>
+        @endif
+          @if ($totalHigh != 0.00)
+            <div class="col-lg-2 offset-lg-8 col-sm-4 offset-sm-6">
+              BTW 21%
+            </div>
+
+        <div class="col-lg-2 col-sm-2">
+          <p class="text-right">
+            {{ __('general.currency') }}{{ number_format( $totalHigh - ($totalHigh / 1.21) , 2) }}
+          </p>
+        </div>
+        @endif
         <div class="col-lg-2 offset-lg-8 col-sm-4 offset-sm-6">
           Inclusief BTW
         </div>
         <div class="col-lg-2 col-sm-2">
           <p class="text-right">
-            {{ __('general.currency') }}{{ number_format($total, 2) }}
+            {{ __('general.currency') }}{{ number_format(($totalLow + $totalHigh), 2) }}
           </p>
         </div>
       </div>
