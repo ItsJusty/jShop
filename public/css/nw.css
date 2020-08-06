@@ -76,6 +76,13 @@ p {
   margin-bottom: 12px;
 }
 
+.label-status {
+  border-radius: 6px;
+  color: var(--darkwhite) !important;
+  font-style: bold;
+  /* font-size: 16px; */
+}
+
 .border-radius-none {
   border-radius: 0rem !important;
 }
