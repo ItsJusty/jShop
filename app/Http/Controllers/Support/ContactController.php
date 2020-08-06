@@ -30,7 +30,7 @@ class ContactController extends Controller
         'message' => $request->message
       ];
 
-      Notification::route('mail', 'klantenservice@geekr.nl')->notify(new \App\Notifications\ContactFormNotification($data));
+      Notification::route('mail', 'klantenservice@nachtwinkeltje.nl')->notify(new \App\Notifications\ContactFormNotification($data));
 
       flash('Je vraag is verzonden naar onze klantenservice!')->success();
       return redirect()->back();
