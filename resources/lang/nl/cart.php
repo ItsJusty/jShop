@@ -7,7 +7,7 @@ return [
     'place_order' => 'Bestelling plaatsen',
     'order' => 'Bestel',
     'order_confirmed' => 'Je bestelling is bevestigd!',
-    'order_confirmed_sub' => 'We sturen je een mail met een verzendbevestiging wanneer wij je pakket versturen',
+    'order_confirmed_sub' => 'We proberen je bestelling zo snel mogelijk te bezorgen.',
     'new_order_created' => 'Nieuwe bestelling aangemaakt:',
     'order_status' => 'Bestelling status:',
     'order_awaiting_payment' => 'In afwachting van betaling',
