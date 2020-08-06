@@ -2,8 +2,13 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <meta name="title" content="Nachtwinkeltje | @yield('page')">
+    <meta name="og:title" content="Nachtwinkeltje | @yield('page')">
+    <meta name="description" content="Bestel je drank in de omgeving Leeuwarden van donderdag tot en met zaterdag tussen 20:00 en 03:00. Gratis bezorging boven 25 euro!">
+    <meta name="og:description" content="Bestel je drank in de omgeving Leeuwarden van donderdag tot en met zaterdag tussen 20:00 en 03:00. Gratis bezorging boven 25 euro!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="{{asset('img/')}}">
+    <meta property="image" content="{{asset('img/logo-icon.png')}}">
+    <meta property="og:image" content="{{asset('img/logo-icon.png')}}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
