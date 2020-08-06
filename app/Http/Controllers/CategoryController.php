@@ -11,7 +11,7 @@ class CategoryController extends Controller
 {
     public function loadAll()
     {
-      $categories = Category::all();
+      $categories = Category::orderBy('name')->get();
       return view('categories', compact('categories'));
     }
 
