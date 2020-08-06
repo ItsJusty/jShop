@@ -26,7 +26,7 @@
   </div>
   <hr/>
 
-  @forelse($user->orders->reverse() as $order)
+  @forelse($user->orders->where('is_paid', 1)->reverse() as $order)
     <div class="row">
       <div class="col-lg-1 text-uppercase">
         {{ $order->number }}
@@ -46,9 +46,9 @@
       </div>
       <div class="col-lg-2 offset-lg-1">
         @if($order->is_paid)
-          <p class="label label-green">Betaald</p>
+          <p class="label label-status label-green">Betaald</p>
         @else
-          <p class="label label-orange">In Afwachting</p>
+          <p class="label label-status label-red">Geannuleerd</p>
         @endif
       </div>
       <div class="col-lg-2 offset-lg-1">
