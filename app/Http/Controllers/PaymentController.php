@@ -30,7 +30,7 @@ class PaymentController extends Controller
       $payment = Mollie::api()->payments()->create([
         'amount' => [
           'currency' => 'EUR',
-          'value' => number_format($this->totalPrice(Order::find(session('last_created_order_id'))->products), 2), // You must send the correct number of decimals, thus we enforce the use of strings
+          'value' => number_format(Order::find(session('last_created_order_id'))->total_price, 2), // You must send the correct number of decimals, thus we enforce the use of strings
         ],
         'description' => "Bestelling ".Order::find(session('last_created_order_id'))->number." via Geekr.nl",
         'webhookUrl' => action('PaymentController@paymentReceive'),

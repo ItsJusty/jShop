@@ -75,29 +75,33 @@ class OrderController extends Controller
       $order->postal_code = $address->postal_code;
       $order->city = $address->city;
 
+      $session_products = [];
       $productsLow = [];
       $productsHigh = [];
+
       foreach(session('shopping_cart') as $product) {
         for($i = 0; $i < $product['amount']; $i++) {
-          if (Product::find($product['id'])->where('tax_id', 1)) {
-            array_push($productsHigh, Product::find($product['id'])->where('tax_id', 1)->first());
+          array_push($session_products, Product::find($product['id']));
+          if (Product::find($product['id'])->tax_id == 1) {
+            array_push($productsHigh, Product::find($product['id']));
+          } else if (Product::find($product['id'])->tax_id == 2) {
+            array_push($productsLow, Product::find($product['id']));
           }
         }
       }
 
-      foreach(session('shopping_cart') as $product) {
-        for($i = 0; $i < $product['amount']; $i++) {
-          if (Product::find($product['id'])->where('tax_id', 2)) {
-            array_push($productsLow, Product::find($product['id'])->where('tax_id', 1)->first());
-          }
-        }
-      }
-
-      $session_products = array_merge($productsLow, $productsHigh);
+      // $session_products = array_merge($productsLow, $productsHigh);
 
       $order->tax_low = number_format($this->totalPrice($productsLow), 2);
-      $order->tax_high =  number_format($this->totalPrice($productsHigh), 2);
-      $order->total_price = number_format($this->totalPrice($productsLow + $productsHigh), 2);
+      $order->tax_high = number_format($this->totalPrice($productsHigh), 2);
+      // $order->tax_low = number_format($this->totalPrice($productsLow), 2);
+      // $order->tax_high =  number_format($this->totalPrice($productsHigh), 2);
+      $order->total_price = number_format($this->totalPrice($session_products), 2);
+      if (number_format($this->totalPrice($session_products), 2) <= 25.00) {
+        $order->shipping_costs = 2.50;
+        $order->tax_high += 2.50;
+        $order->total_price += 2.50;
+      }
       $order->save();
       $order->products()->saveMany($session_products);
       Auth::user()->orders()->save($order);
