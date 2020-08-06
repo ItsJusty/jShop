@@ -62,7 +62,7 @@
             </h5>
             <div id="q3" class="collapse show" aria-labelledby="h3" data-parent="#accordion">
               <div class="card-body">
-                Heel simpel, druk voor je persoonlijke gegevens op <a href="{{ route('my-details') }}">deze</a> link, en voor je adressen op <a href="{{ route('my-addresses') }}"><b>deze</b></a> link.
+                Heel simpel, druk voor je persoonlijke gegevens op <a href="{{ route('my-details') }}"><b>deze</b></a> link, en voor je adressen op <a href="{{ route('my-addresses') }}"><b>deze</b></a> link.
               </div>
             </div>
 
