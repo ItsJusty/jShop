@@ -66,9 +66,9 @@ a {
   color: var(--darkwhite);
 }
 
-/* .fa-submit {
-  background-color: red !important;
-} */
+.modal-content {
+  background-color: var(--bg);
+}
 
 .fa-submit {
   background: none;

@@ -26,7 +26,7 @@ class CartController extends Controller
       return redirect()->back();
     }
 
-    $amount = intval($request->input('amount'));
+    $amount = intval($request->input('order_amount'));
     if(!$amount || $amount <= 0) $amount = 1;
 
     // if($request->input('amount') <= 0) {
