@@ -18,7 +18,7 @@
           <div class="row">
             <div class="col-lg-7 col-md-8 col-12">
               <label for="title">Product naam</label>
-              <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" value="{{ $product->title }}" autofocus required>
+              <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" value="{{ $product->title }}" required>
             </div>
           </div>
         </div>

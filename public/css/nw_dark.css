@@ -9,6 +9,10 @@
   --card: #191919;
 }
 
+body {
+  background-color: var(--bg)
+}
+
 #app {
   background-color: var(--bg);
 }
@@ -34,6 +38,7 @@ hr {
 input, select {
   background-color: var(--card) !important;
   color: var(--darkwhite) !important;
+  border: 1px solid var(--darkwhite) !important;
 }
 
 textarea {

@@ -13,7 +13,7 @@ class CustomerController extends Controller
     {
       // $orders = Order:
       $customers = User::get();
-      return view('osm.store.customer.list', compact('customers'));
+      return view('osm.store.customers.customer_list', compact('customers'));
     }
 
     public function loadEditCustomer($id)
@@ -23,7 +23,7 @@ class CustomerController extends Controller
         return abort(404);
       }
 
-      return view('osm.store.customer.edit', compact('customer'));
+      return view('osm.store.customers.edit_customer', compact('customer'));
     }
 
     public function updateCustomer($id, Request $request)

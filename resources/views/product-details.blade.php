@@ -46,7 +46,7 @@
       @endif
 
       {{ Form::open(array('action' => 'CartController@addToCart')) }}
-      <input type="number" name="order_amount" id="order_amount" min="1" value="1" />
+      <input type="number" name="order_amount" id="order_amount" min="1" value="1" width="100%"/>
       <input type="hidden" name="id" id="id" value="{{$product->id}}"><br/>
       <button class="btn btn-nw btn-sm mt-4" type="submit" name="submit">
         <i class="fas fa-plus"></i> {{__('product.add_to_cart')}}
@@ -64,7 +64,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 col-11 offset-lg-0 offset-md-0 offset-sm-0">
       <div class="card w-100 border-0 underline-hover shadow-lg" style="border-radius: 0rem">
         @if($product->label_id)
-        <div class="label label-{{ $product->label->color }} p-1">
+        <div class="label p-1" style="background-color: {{$product->label->color}}">
           {{ $product->label->text }}
         </div>
         @endif
@@ -118,5 +118,10 @@ $(function() {
 			$('#imagemodal').modal('show');
 		});
 });
+
+$('#imagemodal').on('click', function(e) {
+  e.preventDefault()
+  $('#imagemodal').modal('hide');
+})
 </script>
 @endsection

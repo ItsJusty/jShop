@@ -39,14 +39,14 @@ class ProductController extends Controller
     public function loadOsmProducts()
     {
       $products = Product::get();
-      return view('osm.store.products', compact('products'));
+      return view('osm.store.products.product_list', compact('products'));
     }
 
     public function loadEditProduct($id)
     {
       $product = Product::find($id);
       $labels = Label::get();
-      return view('osm.store.edit_product', compact('product', 'labels'));
+      return view('osm.store.products.edit_product', compact('product', 'labels'));
     }
 
     public function updateProduct($id, Request $request)
@@ -69,7 +69,7 @@ class ProductController extends Controller
     public function loadNewProduct()
     {
       $labels = Label::get();
-      return view('osm.store.add_product', compact('labels'));
+      return view('osm.store.products.add_product', compact('labels'));
     }
 
     public function newProduct(Request $request)

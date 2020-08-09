@@ -10,7 +10,7 @@
         <div class="col-md-8">
             <div class="card">
               <div class="card-title text-center pt-4">
-                <h5>{{ __('Je kan meer met een Geekr account!') }}</h5>
+                <h5>{{ __('Je kunt bijna bestellen!') }}</h5>
               </div>
               <hr/>
                 <div class="card-body">

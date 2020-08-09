@@ -13,13 +13,13 @@
 
 
 // START OSM
-$osmRoutes = function() {
+Route::prefix('osm')->group(function() {
   Route::get('/', function() {
     return redirect()->route('employee-login');
   });
 
   Route::get('/login', 'Auth\LoginController@loadEmployeeLogin')->name('employee-login');
-  Route::post('/login', 'Auth\LoginController@employeeLogin');
+  Route::post('/login', 'Auth\LoginController@employeeLogin')->name('employee-login');
 
   Route::middleware('auth:employee')->group(function() {
     // MIDDLEWARE EMPLOYEE
@@ -55,11 +55,11 @@ $osmRoutes = function() {
 
   });
   // END MIDDLEWARE EMPLOYEE
-};
+});
 
-Route::group(array('domain' => 'osm.pre-alpha.geekr.nl'), $osmRoutes);
-Route::group(array('domain' => 'osm.geekr.nl'), $osmRoutes);
-Route::group(array('domain' => 'osm.localhost.dev'), $osmRoutes);
+// Route::group(array('domain' => 'osm.pre-alpha.geekr.nl'), $osmRoutes);
+// Route::group(array('domain' => 'osm.geekr.nl'), $osmRoutes);
+// Route::group(array('domain' => 'http://localhost/osm'), $osmRoutes);
 
 // END OSM
 
@@ -71,6 +71,9 @@ Route::get('admin', function () {
 Route::get('/', 'IndexController@index')->name('index');
 
 Auth::routes();
+
+Route::get('/download', 'InvoiceController@download');
+Route::get('/dl', 'InvoiceController@load');
 
 Route::get('/account', 'AccountController@index')->name('home')->middleware('verified');
 

@@ -15,7 +15,7 @@
                 @include('flash::message')
                 <hr/>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('employee-login') }}">
                         @csrf
 
                         <div class="form-group row">

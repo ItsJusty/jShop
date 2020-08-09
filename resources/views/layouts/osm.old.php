@@ -29,7 +29,7 @@
     <div id="app">
       <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm border-bottom">
         <div class="container">
-          <a class="mt-4 mb-3" href="{{ route('employee-dashboard') }}" style="color: #000">Nachtwinkeltje OSM</a>
+          <a class="mt-4 mb-3" href="{{ route('employee-dashboard') }}" style="color: #000">Nachtwin OSM</a>
             <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button> -->

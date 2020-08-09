@@ -8,7 +8,8 @@
     <div class="col">
       <div class="card shadow-lg border-radius-none">
         <div class="card-title text-center pt-4">
-          <h5>Welkom, {{ Auth::guard('employee')->user()->fullName() }} - {{ Auth::guard('employee')->user()->role()->name }}</h5>
+          <h4>Goedenavond</h4>
+          <h5>{{ $employee->fullName() }}  - {{ $employee->role()->name }}</h5>
         </div>
       </div>
     </div>
