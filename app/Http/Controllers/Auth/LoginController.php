@@ -44,7 +44,7 @@ class LoginController extends Controller
 
     public function loadEmployeeLogin()
     {
-      return view('auth.login');
+      return view('osm.auth.login');
     }
 
     public function employeeLogin(Request $request)
@@ -59,8 +59,8 @@ class LoginController extends Controller
         // dd($request->email);
         return redirect()->route('employee-login');
       }
-      flash('De combinatie van de ingevulde gegevens is niet bekend bij OSM')->error();
-      // dd($request->email);
+      // flash('De combinatie van de ingevulde gegevens is niet bekend bij OSM')->error();
+      dd($request->email);
       return back()->withInput($request->only('email', 'remember'));
     }
 }

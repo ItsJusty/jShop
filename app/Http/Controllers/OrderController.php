@@ -20,6 +20,8 @@ class OrderController extends Controller
     public function loadOrder()
     {
 
+      if(!session('shoppingcart')) return redirect()->route('index');
+
       foreach (session('shopping_cart') as $product) {
         if($product['amount'] > Product::where(['id' => $product['id']])->first()->stock) {
           flash(__("Het product <b>" . Product::where(['id' => $product['id']])->first()->title . "</b> is niet op voorraad in deze hoeveelheid. Het maximale aantal op dit moment is <b>" . Product::where(['id' => $product['id']])->first()->stock . "</b>"))->error();
