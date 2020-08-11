@@ -1,5 +1,5 @@
 :root {
-  --nw: #FFCD05;
+  --main: #0099cc;
   --gray: #808080;
   --white: #FFFFFF;
   --darkwhite: rgba(255, 255, 255, 0.7);
@@ -50,14 +50,6 @@ a {
   color: var(--darkwhite) !important;
 }
 
-/* #search_span::after {
-  content: "\1F50D";
-  font-family: fontawesome;
-  left:-5px;
-  position:absolute;
-  top:0
-} */
-
 .navbar-toggler i {
   color: var(--darkwhite);
 }
@@ -76,11 +68,7 @@ a {
 }
 
 .fa-submit {
-  background: none;
-  padding: 0px;
-  border: none;
   color: white;
-  cursor: pointer;
 }
 
 .search {
@@ -97,11 +85,11 @@ a {
   color: var(--darkwhite) !important;
 }
 
-.btn-nw {
+.btn-main {
   background-color: var(--bg);
 }
 
-.btn-nw:hover {
+.btn-main:hover {
   background-color: var(--card);
 }
 

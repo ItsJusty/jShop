@@ -1,18 +1,16 @@
 @extends('layouts.app')
 
-@section('page', 'Voor al jouw drank in de nacht')
+@section('page', 'The best store in the world')
 @section('content')
 <div class="container mt-5">
   <div class="image text-center">
-    <!-- <img class="w-100" src="http://localhost.dev:81/img/banner.png" alt="banner"> -->
+    <!-- optional banner -->
   </div>
 </div>
 <div class="container mt-5">
   @include('flash::message')
   <div class="mb-4">
-    <div class="alert alert-danger" role="alert">
-      <b>Let op!</b> Op dit moment zijn we nog in testfase, alle acties worden niet opgeslagen.
-    </div>
+    <!-- optional alert -->
   </div>
   <div class="row">
     @forelse($products as $product)
@@ -40,7 +38,7 @@
               <h6 class="d-inline p-1 w-100 bd-highlight">{{__('general.currency')}}{{number_format($product->price, 2)}}</h6>
               {{ Form::open(array('action' => 'CartController@addToCart')) }}
               <input type="hidden" name="id" id="id" value="{{$product->id}}">
-              <button href="{{action('CartController@addToCart')}}" class="btn btn-nw flex-shrink-1 bd-highlight">
+              <button href="{{action('CartController@addToCart')}}" class="btn btn-main flex-shrink-1 bd-highlight">
                 <i class="fas fa-cart-plus"></i>
               </button>
               {{ Form::close() }}
@@ -48,28 +46,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Modal -->
-      <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
     @empty
       <div class="col-12">
         <p class="text-center">Geen producten gevonden</p>
@@ -80,7 +56,7 @@
 
 <div class="container-fluid p-0">
   <div class="image w-100 text-center">
-    <!-- <img class="w-100" src="http://localhost.dev:81/img/banner.png" alt="banner"> -->
+    <!-- optional banner -->
   </div>
 </div>
 

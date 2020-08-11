@@ -70,6 +70,8 @@ Route::get('admin', function () {
 
 Route::get('/', 'IndexController@index')->name('index');
 
+Route::post('/webtheme/toggle', 'UserController@changeWebTheme')->name('toggle-web-theme');
+
 Auth::routes();
 
 Route::get('/download', 'InvoiceController@download');

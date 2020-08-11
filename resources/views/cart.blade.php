@@ -24,7 +24,7 @@
         {{ Form::open(array('action' => 'CartController@amountChange')) }}
           <input type="hidden" name="id" value="{{$cartProduct['product']->id}}" />
           <input style="max-width: 64px;" type="number" name="amount" class="form-contol form-control-sm" id="{{'aantal' . $cartProduct['product']->id}}" aria-describedby="quantity" placeholder="Aantal" value="{{$cartProduct['amount']}}" />
-          <!-- <button type="submit" class="btn btn-nw" name="button"><i class="fas fa-sync-alt"></i></button> -->
+          <!-- <button type="submit" class="btn btn-main" name="button"><i class="fas fa-sync-alt"></i></button> -->
         {{ Form::close() }}
       </div>
       <div class="col-lg-2 align-items-center d-none d-lg-block">
@@ -137,7 +137,7 @@
               {{--            <p>{{$cartProduct['amount']}} x {{ __('general.currency') }}{{$cartProduct['product']->price}}</p>--}}
           </div>
           <div class="col-lg-3 offset-lg-5 align-items-center">
-              <p class="text-right"><a class="btn btn-nw text-white" href="{{action('OrderController@loadOrder')}}">{{__('cart.place_order')}} <i class="fas fa-plane"></i></a></p>
+              <p class="text-right"><a class="btn btn-main text-white" href="{{action('OrderController@loadOrder')}}">{{__('cart.place_order')}} <i class="fas fa-plane"></i></a></p>
           </div>
       </div>
   @endif

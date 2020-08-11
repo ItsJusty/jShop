@@ -15,7 +15,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Nachtwinkeltje | @yield('page')</title>
+    <title>{{ env('APP_NAME') }} | @yield('page')</title>
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -29,8 +29,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/nw.css') }}?time={{time()}}" rel="stylesheet">
-    <link href="{{ asset('css/nw_dark.css') }}?time={{time()}}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}?time={{time()}}" rel="stylesheet">
+    @if(session('dark_theme'))
+      <link href="{{ asset('css/dark.css') }}?time={{time()}}" rel="stylesheet">
+    @endif
 </head>
 <body>
   <div id="app">
@@ -56,13 +58,13 @@
 
               <li class="nav-item">
                 <a href="{{ route('winkelmandje') }}" id="cart" class="nav-link d-none d-md-block">
-                  <i class="fa fa-shopping-cart"></i> @lang('shopping.shoppingcart') ({{$count}}) <span class="caret"></span>
+                  <i class="fa fa-shopping-cart"></i> @lang('shopping.shopping_cart') ({{$count}}) <span class="caret"></span>
                 </a>
               </li>
             <!-- Authentication Links -->
             @guest
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">{{ __('Mijn account') }}</a>
+                <a class="nav-link" href="{{ route('register') }}">{{ __('auth.my_account') }}</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('register') }}">{{ __('Mijn account') }}</a>
@@ -99,6 +101,19 @@
                 </div>
               </li>
             @endguest
+            <li class="nav-item d-none d-md-block">
+              @if (session('dark_theme'))
+                <form class="mt-2" action="{{ route('toggle-web-theme') }}" method="post">
+                  @csrf
+                  <button class="theme-toggler" href="{{ route('toggle-web-theme') }}" type="submit"><i class="fa fa-sun"></i></button>
+                </form>
+                @else
+                <form class="mt-2" action="{{ route('toggle-web-theme') }}" method="post">
+                  @csrf
+                  <button class="theme-toggler" href="{{ route('toggle-web-theme') }}" type="submit"><i class="fa fa-moon"></i></button>
+                </form>
+              @endif
+            </li>
           </ul>
         </div>
       </div>
@@ -109,7 +124,7 @@
           <div class="col-10">
             <a class="navbar-brand mt-1" href="{{ url('/') }}">
               <!-- {{ config('app.name', 'Geekr') }} -->
-              <img src="{{ asset('img/logo-textonly.png') }}" alt="Logo" class="logo-nav">
+              <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-nav">
             </a>
           </div>
           <div class="col-1">
@@ -145,6 +160,19 @@
                 </div>
               {{ Form::close() }}
             </li>
+            <li class="nav-item d-md-none">
+              @if (session('dark_theme'))
+                <form action="{{ route('toggle-web-theme') }}" method="post">
+                  @csrf
+                  <button class="nav-link theme-toggler" href="{{ route('toggle-web-theme') }}" type="submit">White theme <i class="theme-toggler-icon fa fa-sun"></i></button>
+                </form>
+                @else
+                <form action="{{ route('toggle-web-theme') }}" method="post">
+                  @csrf
+                 <button class="nav-link theme-toggler" href="{{ route('toggle-web-theme') }}" type="submit">Dark theme <i class="theme-toggler-icon fa fa-moon"></i></button>
+                </form>
+              @endif
+            </li>
           </ul>
         </div>
       </div>
@@ -174,8 +202,8 @@
           </div>
           <div class="col-lg-3 col-6">
             <h5>Handig</h5><br/>
-            <a class="footer-item" href="https://www.kvk.nl/zoeken/?source=all&q=75491753&start=0&site=kvk2014" target="_blank">KVK: 78323460<br/>
-            IBAN: NL93 INGB 0007 1742 12<br/>
+            KVK: {{ config('app.business_id') }}<br/>
+            IBAN: {{ config('app.iban_number') }}<br/>
             BTW: NL860301989B01
           </div>
           <div class="col-lg-3 col-6">

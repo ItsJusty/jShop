@@ -43,4 +43,17 @@ class UserController extends Controller
       flash(__('flashes.user_details_changed'))->success();
       return redirect()->back();
     }
+
+    public function changeWebTheme(Request $r)
+    {
+      $theme = $r->session()->get('dark_theme');
+
+      if ($theme) {
+        $r->session()->put('dark_theme', false);
+      } else {
+        $r->session()->put('dark_theme', true);
+      }
+
+      return redirect()->back();
+    }
 }

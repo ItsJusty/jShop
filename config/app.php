@@ -13,8 +13,11 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Geekr'),
-    'email' => env('APP_EMAIL', 'hallo@geekr.nl'),
+    'name' => env('APP_NAME', 'jShop'),
+    'email' => 'hello@mystore.com',
+    'slogan' => 'The best store in the world',
+    'iban_number' => 'NL01 ABCD 0001 2345 67',
+    'business_id' => '12345678',
 
     /*
     |--------------------------------------------------------------------------

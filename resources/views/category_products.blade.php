@@ -38,7 +38,7 @@
               <h6 class="d-inline p-1 w-100 bd-highlight">{{__('general.currency')}}{{number_format($product->price, 2)}}</h6>
               {{ Form::open(array('action' => 'CartController@addToCart')) }}
               <input type="hidden" name="id" id="id" value="{{$product->id}}">
-              <button href="{{action('CartController@addToCart')}}" class="btn btn-nw flex-shrink-1 bd-highlight">
+              <button href="{{action('CartController@addToCart')}}" class="btn btn-main flex-shrink-1 bd-highlight">
                 <i class="fas fa-cart-plus"></i>
               </button>
               {{ Form::close() }}

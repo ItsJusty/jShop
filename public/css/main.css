@@ -1,5 +1,5 @@
 :root {
-  --nw: #FFCD05;
+  --main: #0099cc;
   --gray: #808080;
   --white: #FFFFFF;
   --red: #FF0000;
@@ -36,15 +36,11 @@ input[type='radio']:checked:after {
     top: -2px;
     left: -1px;
     position: relative;
-    background-color: var(--nw);
+    background-color: var(--main);
     content: '';
     display: inline-block;
     visibility: visible;
     border: 2px solid white;
-}
-
-input {
-  border: none !important;
 }
 
 main {
@@ -76,6 +72,19 @@ p {
   vertical-align: center;
 }
 
+#search {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 5px;
+}
+
+.fa-submit {
+  background: none;
+  padding: 0px;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
 .support-items div {
   margin-bottom: 12px;
 }
@@ -92,7 +101,7 @@ p {
 }
 
 .dropdown-item:active {
-  background-color: var(--nw);
+  background-color: var(--main);
 }
 
 .dropdown-menu {
@@ -140,23 +149,15 @@ p {
   align-items: center;
 }
 
-.geekr-color {
-  color: var(--nw);
-}
-
-.geekr-bg {
-  background-color: var(--nw) !important;
-}
-
-.btn-nw {
-  background-color: var(--nw);
+.btn-main {
+  background-color: var(--main);
   color: #FFF;
-  border-color: var(--nw);
+  border-color: var(--main);
   border-radius: 3px;
 }
 
-.btn-nw:hover {
-  background-color: #cc5800;
+.btn-main:hover {
+  background-color: #007399;
   color: #FFF;
   border-color: #856c04;
 }
@@ -196,7 +197,7 @@ p {
   bottom: -2px;
   width: 0px;
   height: 2px;
-  background: var(--nw);
+  background: var(--main);
   transition: all 0.5s;
   /* transition: all 1s; */
 }
@@ -225,7 +226,7 @@ a:hover {
 }
 
 .label-orange {
-  background-color: var(--nw);
+  background-color: var(--main);
 }
 
 .label-red {
@@ -247,7 +248,7 @@ a:hover {
 }
 
 .product-image::before {
-  
+
 }
 
 .product-image:after {
