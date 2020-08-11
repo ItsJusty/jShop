@@ -20,7 +20,7 @@ class OrderController extends Controller
     public function loadOrder()
     {
 
-      if(!session('shoppingcart')) return redirect()->route('index');
+      if(!session('shopping_cart')) return redirect()->route('index');
 
       foreach (session('shopping_cart') as $product) {
         if($product['amount'] > Product::where(['id' => $product['id']])->first()->stock) {
